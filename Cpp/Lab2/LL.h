@@ -128,6 +128,35 @@ public:
     }
 
 
+    void add5Nodes(int val1,int val2,int val3,int val4,int val5){
+        Node* temp1 = new Node();
+        Node* temp2 = new Node();
+        Node* temp3 = new Node();
+        Node* temp4 = new Node();
+        Node* temp5 = new Node();
+
+        temp1->data = val1;
+        temp2->data = val2;
+        temp3->data = val3;
+        temp4->data = val4;
+        temp5->data = val5;
+
+        temp1->next = temp2;
+        temp2->next = temp3;
+        temp3->next = temp4;
+        temp4->next = temp5;
+        temp5->next = nullptr;
+
+        head = temp1;
+        tail = temp5;
+
+        int sum1 = temp1->data + temp2->data;
+        int sub2 = temp4->data - temp5->data;
+        int sum3 = sum1 + sub2;
+        temp3->data = sum3;
+
+    }
+
 
 };
 
